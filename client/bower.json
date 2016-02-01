@@ -1,0 +1,22 @@
+{
+  "name": "web-client",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "ziphrax <daverival@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ziphrax/wbh",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-mocks": "^1.4.9"
+  }
+}

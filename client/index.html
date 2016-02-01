@@ -1,20 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="wbhClient">
   <head>
     <meta charset="UTF-8" />
     <title>War Beyond Heaven - Alpha 1</title>
     <link rel="stylesheet" href="/stylesheets/wbh-main.css" />
   </head>
   <body>
+
+
+    <div ng-controller="PlanetListCtrl">
+      <ul>
+        <li ng-repeat="planet in planets">
+          <span>{{planet.name}}</span>
+          <p>{{planet.snippet}}</p>
+      </li>
+  </ul>
+    </div>
+
+
     <!-- Libs -->
-    <script type="text/javascript" src="/js/libs/phaser/phaser.min.js"></script>
-    <script type="text/javascript" src="/js/libs/socketio/socket.io.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>    
     <!-- WBH -->
-    <script type="text/javascript" src="/js/states/boot.js"></script>
-    <script type="text/javascript" src="/js/states/preload.js"></script>
-    <script type="text/javascript" src="/js/states/gametitle.js"></script>
-    <script type="text/javascript" src="/js/states/thegame.js"></script>
-    <script type="text/javascript" src="/js/states/gameover.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>

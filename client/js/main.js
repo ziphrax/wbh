@@ -1,11 +1,18 @@
-(function(window){
+var wbhClient = angular.module('wbhClient',[]);
 
-  var game = new Phaser.Game(800, 600, Phaser.AUTO,'game');
-  game.state.add("Boot",boot);
-	game.state.add("Preload",preload);
-	game.state.add("GameTitle",gameTitle);
-	game.state.add("TheGame",theGame);
-	game.state.add("GameOver",gameOver);
-	game.state.start("Boot");
-
-})(this);
+wbhClient.controller('PlanetListCtrl',function($scope){
+  $scope.planets = [
+    {
+      "name" : "Planet A",
+      "snippet" : "Planet A is a planet!"
+    },
+    {
+      "name" : "Planet B",
+      "snippet" : "Planet B is a planet!"
+    },
+    {
+      "name" : "Planet C",
+      "snippet" : "Planet C is a planet!"
+    }
+  ];
+});
