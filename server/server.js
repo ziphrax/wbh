@@ -12,6 +12,10 @@ app.use('/',express.static('../client'));
 
 io.on('connection', connection.handleConnection);
 
-server.listen(port,function(){
+var s = server.listen(port,function(){
   console.log("WBH Server started on port %s",port);
 });
+
+exports.closeServer = function(){
+  s.close();
+};
